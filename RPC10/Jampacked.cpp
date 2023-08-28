@@ -10,11 +10,7 @@ int main(){
     } else if(n % k == 0){
         cout << k << "\n";
     }else{
-        ratioFloored = floor(n / k);
-        temp = (ratioFloored-1)*k;
-        remJars = n - temp;
-        cout << floor(remJars/2) << "\n";
+        cout << (long long)(n / ((n/k) +1)) << "\n";
     }
-
     return 0;
 }
