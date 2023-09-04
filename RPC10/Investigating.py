@@ -55,4 +55,3 @@ for iteration in range(int(q)):
             break
         else:
             continue                
-
