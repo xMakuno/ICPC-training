@@ -89,15 +89,16 @@ int main(){
         printf("Coord %d %d (x,y) has: %d \n", lane, temp, matrix[lane][temp]);
     } */
 
+    int maxRemainder = (word.size()-1) % k;
+
     int flag = 0;
     for(int i = 0; i <= k; ++i){
-        if(i % k == 0){
+        if(i <= maxRemainder){
             quicksort(matrix[i], 0, length-1);
-        }else{
-            int rows = sizeof(matrix)/sizeof(matrix[i]);
-            //cout << rows << endl;
-            quicksort(matrix[i], 0, rows-1);
+        } else {
+            quicksort(matrix[i], 0, length-2);
         }
+        //cout << "Veamos: " << matrix[i][length-1] << '\n';
         
     }
     string ans;
@@ -105,7 +106,7 @@ int main(){
         lane = i % k;
         temp = i / k;
         ans += findLetter(matrix[lane][temp]-1);
-        //cout << matrix[lane][temp] << " ";
+        // cout << matrix[lane][temp] << " ";
     }
 
     cout << ans << '\n';
