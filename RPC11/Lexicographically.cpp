@@ -65,6 +65,22 @@ int main(){
     string word;
     int k;
     cin >> word >> k;
+
+    if(k == 1){
+        int array[word.size()];
+        for(int i = 0; i < word.size(); ++i){
+            array[i] = word[i] & 31;
+        }
+
+        quicksort(array, 0, word.size()-1);
+
+        for(int i = 0; i < word.size(); ++i){
+            word[i] = findLetter(array[i]-1);
+        }
+        cout << word << '\n';
+        return 0;
+    }
+
     int height = k;
     int length = ceil( (double) word.size() / (float) k);
 
