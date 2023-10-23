@@ -85,9 +85,7 @@ int main(){
     int length = ceil( (double) word.size() / (float) k);
 
     int matrix[height][length];
-    int (*ptr)[height][length];
-
-    ptr = &matrix;
+    
     int lane = 0, temp = 0;
 
     for(int i = 0; i < word.size(); ++i){

@@ -6,6 +6,11 @@ int main(){
     
 
     int input, coordX, coordY;
+    string inpStr;
+
+    getline(cin, inpStr, " ");
+
+    cout << inpStr;
 
     for (int i = 1; i <= 5; i++)
     {
@@ -18,6 +23,9 @@ int main(){
         }
     }
     
+
+    
+
     cout << (2 - coordX) + (2 - coordY);
 
 
