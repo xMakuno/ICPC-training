@@ -9,7 +9,7 @@ def KMPSearch(pat, txt):
  
     # Preprocess the pattern (calculate lps[] array)
     computeLPSArray(pat, M, lps)
- 
+    print(lps)
     i = 0 # index for txt[]
     while i < N:
         if pat[j] == txt[i]:
@@ -54,6 +54,6 @@ def computeLPSArray(pat, M, lps):
                 i += 1
  
 if __name__ == "__main__":
-    txt = "CCC"
-    pat = "D"
+    txt = "CCCCCCCCC"
+    pat = "C"
     KMPSearch(pat, txt)
