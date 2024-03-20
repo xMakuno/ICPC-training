@@ -1,3 +1,4 @@
+# Link: https://codeforces.com/contest/1935/problem/A
 import string
 
 def solve():
