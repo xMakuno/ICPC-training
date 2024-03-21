@@ -1,4 +1,5 @@
-if __name__ == "__main__":
+# Link: https://codeforces.com/contest/1945/problem/A
+def ac(): # 92ms
     n = int(input())
     for i in range(n):
         a, b, c = [int(x) for x in input().split()]
@@ -18,3 +19,7 @@ if __name__ == "__main__":
             else:
                 tents = -1
         print(tents)
+    
+
+if __name__ == "__main__":
+    ac()
