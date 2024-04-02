@@ -25,10 +25,16 @@ def TLE():
         ans = ans + actualInversions*gaussFormula(n)+ virtualInversions*gaussFormula(n-1)
     print(ans % (10**9 + 7))
 
+def charIndex(c):
+    return ord(c) - 97
+
+def indexToChar(pos):
+    return chr(pos + 97)
+
 def solve2():
-    s = input()
+    s = [charIndex(x) for x in input()]
     n = int(input())
-    print(*s.encode("ascii"))
+    print(s)
 
 if __name__ == "__main__":
     # TLE()
