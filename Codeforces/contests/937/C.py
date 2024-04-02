@@ -7,7 +7,6 @@ if __name__ == "__main__":
         if hour == 0:
             print(f'12{utc[2:]} AM')
         elif hour < 12 and hour > 0:
-
             print(f'{utc} AM')
         elif hour == 12:
             print(f'{utc} PM')
