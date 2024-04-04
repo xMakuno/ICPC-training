@@ -1,3 +1,12 @@
+from bisect import bisect_left
+
+def bs2(a,x):
+    i = bisect_left(a, x)
+    if i != len(a) and a[i] == x:
+        return i
+    else:
+        return -1
+    
 def bs1(arr, low, high, x):
  
     # Check base case
