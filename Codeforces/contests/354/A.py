@@ -1,7 +1,7 @@
 '''
 Site: Codeforces
 Contest: Codeforces Round 354 Div 2
-Link: https://codeforces.com/contest/816
+Link: https://codeforces.com/contest/676
 Problem: A
 Topic: constructive algorithms, implementation
 Elo: 800
