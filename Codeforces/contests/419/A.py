@@ -1,3 +1,11 @@
+'''
+Site: Codeforces
+Contest: Codeforces Round 419 Div 2
+Problem: A
+Topic: brute-force, implementation
+Elo: 1000
+Link: https://codeforces.com/contest/816
+'''
 def solve():
     time = input()
     hour = int(time[0:2])
