@@ -5,7 +5,6 @@ Link: https://codeforces.com/contest/816
 Problem: B
 Topic: binary search, data structures, implementation
 Elo: 1000
-
 '''
 
 import sys

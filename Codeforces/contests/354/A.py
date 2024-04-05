@@ -1,3 +1,11 @@
+'''
+Site: Codeforces
+Contest: Codeforces Round 354 Div 2
+Link: https://codeforces.com/contest/816
+Problem: A
+Topic: constructive algorithms, implementation
+Elo: 800
+'''
 if __name__ == "__main__":
     n = int(input())
     indexes = []
