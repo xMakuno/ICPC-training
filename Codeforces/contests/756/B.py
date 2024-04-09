@@ -6,10 +6,9 @@ Problem: B
 Topic: constructive algorithms, math
 Elo: 800
 '''
-import math
 def solve():
     a, b = list(map(int, input().split()))
-    return min(a,min(b, (a+b)//2))
+    return min(a, b, (a+b) >> 2)
 
 if __name__ == "__main__":
     t = int(input())
