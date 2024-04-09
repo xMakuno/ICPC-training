@@ -1,1 +1,1 @@
-print("yes")
+print("safety")
