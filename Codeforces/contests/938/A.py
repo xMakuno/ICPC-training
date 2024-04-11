@@ -1,3 +1,11 @@
+'''
+Site: Codeforces
+Contest: Codeforces Round 938 Div 3
+Link: https://codeforces.com/contest/1955
+Problem: A
+Topic: math
+Elo: N/A
+'''
 def solve():
     n, a, b = list(map(int, input().split()))
     if n & 1 == 0:

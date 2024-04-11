@@ -1,3 +1,11 @@
+'''
+Site: Codeforces
+Contest: Codeforces Round 938 Div 3
+Link: https://codeforces.com/contest/1955
+Problem: B
+Topic: constructive algorithms, data structures, implementation, sortings
+Elo: N/A
+'''
 def ac(): # AC at 312 ms
     n, c, d = list(map(int, input().split()))
     psq = list(map(int, input().split()))
