@@ -11,6 +11,9 @@ using namespace std;
 #define sec second
 #define all(v) v.begin(),v.end()
 #define pb push_back
+#define pf push_front
+#define pob pop_back
+#define pof pop_front
 #define endl '\n'
 #define printa(v) for(auto x: v) { cout << x << " ";}
 
