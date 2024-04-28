@@ -1,6 +1,13 @@
-# Link: https://codeforces.com/problemset/problem/1472/B
+'''
+Site: Codeforces
+Contest: Codeforces Round 693 Div 3
+Link: https://codeforces.com/problemset/problem/1472/B
+Problem: B
+Topic: dp, greedy, math
+Elo: 800
+'''
 
-def solve():
+def solve(): #AC for B
     n = input()
     memo = {1:0, 2:0}
     for c in input().split():
