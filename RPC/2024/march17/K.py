@@ -12,13 +12,15 @@ def KMPSearch(txt):
             i += 1
             j += 1
         if j == M:
-            unp.append(j-2)
+            unp.append(i-j)
             j = lps[j-1]
         elif i < N and pat[j] != txt[i]:
             if j != 0:
                 j = lps[j-1]
             else:
                 i += 1
+    return unp
+
 def solve():
     n = int(input())
     if n <= 2:
@@ -30,13 +32,10 @@ def solve():
             temp = ['V' if x in vowels else 'C' for x in [*input()]]
             if len(temp) >= 3:
                 temp = temp[:3]
-            print(f'Temp: {temp}')
+            # print(f'Temp: {temp}')
             megaList.append(temp)
             acronym += temp[0]
-        KMPSearch(acronym)
-        
-        
-
+        indexes = KMPSearch(acronym)
 if __name__ == "__main__":
     solve()
 
