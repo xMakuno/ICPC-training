@@ -1,3 +1,11 @@
+'''
+Site: Codeforces
+Contest: Codeforces Round 937 Div 4
+Link: https://codeforces.com/contest/1950
+Problem: C
+Topic: implementation, math
+Elo: 800
+'''
 if __name__ == "__main__":
     t = int(input())
     while t:
