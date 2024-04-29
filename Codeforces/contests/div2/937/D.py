@@ -1,3 +1,11 @@
+'''
+Site: Codeforces
+Contest: Codeforces Round 937 Div 4
+Link: https://codeforces.com/contest/1950
+Problem: D
+Topic: brute force, dp, implementation, number theory
+Elo: 800
+'''
 if __name__ == "__main__": #WA bad implementation
     t = int(input())
     while t:

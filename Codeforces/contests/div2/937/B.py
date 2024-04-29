@@ -1,3 +1,11 @@
+'''
+Site: Codeforces
+Contest: Codeforces Round 937 Div 4
+Link: https://codeforces.com/contest/1950
+Problem: B
+Topic: implementation
+Elo: 800
+'''
 numeral = "##"
 points = ".."
 if __name__ == "__main__":
