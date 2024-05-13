@@ -13,6 +13,7 @@ void constructTree(int input[], int segTree[], int lo, int hi, int pos){
     constructTree(input, segTree, mid+1, hi, 2*pos + 2);
     // segment tree for sum queries
     // segTree[pos] = segTree[2*pos+1] + segTree[2*pos+2];
+    
     // segment tree for min queries
     segTree[pos] = min(segTree[2*pos+1], segTree[2*pos+2]);
 }
@@ -29,6 +30,12 @@ int main(){
         cout << arr[i] << " \n"[i == size-1];
     } */
     
+    /*
+    Formulatic Approach
+    int h = ceil(log2(size+1));
+    segSize = pow(2, h) - 1;
+    */
+
     if( pow(2,nextPower) == size){
         segSize = size*2 - 1;
     }else{
