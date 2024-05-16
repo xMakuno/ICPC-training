@@ -3,7 +3,10 @@ using namespace std;
 int main(){
     int n, k;
     cin >> n >> k;
-    int facts[3] = {1, 2, 3};
+    vector<int> facts;
+    for(int i = 0; i < k; ++i){
+        facts.push_back(i+1);
+    }
     deque<int> nums(n,0);
     for(int i = 0; i < n; ++i){
         cin >> nums[i];
@@ -19,7 +22,7 @@ int main(){
             if(window.size() > k){
                 window.pop_front();
             }
-            int dotp = facts[0]*window[0] + facts[1]*window[1] + facts[2]*window[2];
+            int dotp = inner_product(facts.begin(), facts.end(), window.begin(), 0);
             answer.push({-dotp, -index});
             index++;
         }
