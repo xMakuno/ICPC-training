@@ -1,23 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    vector<string> ans;
-    string S;
-    int m, n, k;
+    int m,n,k;
+    string line;
     cin >> m >> n >> k;
     for(int i = 0; i < m; ++i){
-        cin >> S;
+        cin >> line;
         string temp = "";
-        int counter = k;
-        for(int j = 0; i < n; ++j){
-            while(counter--){
-                temp += S[j];
+        for(int c = 0; c < n; ++c){
+            for(int j = 0; j < k; ++j){
+                temp = temp + line[c]; 
             }
         }
-        ans.push_back(temp);
-    }
-    for(int i = 0; i < m; ++i){
-        cout << ans[i] << '\n';
+        for(int j = 0; j < k; ++j){
+            cout << temp << '\n';
+        }
     }
     return 0;
 }
