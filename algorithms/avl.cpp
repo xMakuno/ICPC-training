@@ -23,6 +23,14 @@ struct Node{
     }
 };
 
+Node* newNode(int id, float x, float y){
+    Node* node = new Node();
+    node->id = id;
+    node->x = x;
+    node->y = y;
+    node->left = NULL;
+    node->right = NULL;
+}
 
 /*
         A
@@ -97,10 +105,38 @@ Node* leftRotation(Node* A){
     return B;
 }
 
-Node* insertNode(){
+Node* insertNode(Node* node, int id, float x, float y){
+    if(node = NULL){
+        return newNode(id, x, y);
+    }
+    if(id < node->id){
+        node->left = insertNode(node->left, id, x, y);
+    }else if( id > node->id){
+        node->right = insertNode(node->right, id, x, y);
+    }
+    node->height = 1 + max(node->left->getHeight(), node->right->getHeight());
+
+    int balance = node->getBalance();
+
+    if(balance > 1 && id < node->left->id){
+        return rightRotation(node);
+    }
+
+    if(balance < -1 && id > node->right->id){
+        return leftRotation(node);
+    }
+    if(balance > 1 && id > node->left->id){
+        node->left = leftRotation(node->left);
+        return rightRotation(node);
+    }
+    if(balance < -1 && id < node->right->id){
+        node->right = rightRotation(node->right);
+        return leftRotation(node);
+    }
+    return node;
 }
 
-Node* search(Node* r, int ){
+Node* search(Node* r, int id){
 }
 
 void showPre(Node* head){
@@ -110,18 +146,23 @@ void showPre(Node* head){
         showPre(head->right);
     }
 }
-void showIn(){
-
+void showIn(Node* head){
+    if(head != NULL){
+        showIn(head->left);
+        cout << head->id << " ";
+        showIn(head->right);
+    }
 }
-void showPos(){
-
+void showPos(Node* head){
+    if(head != NULL){
+        showPos(head->left);
+        cout << head->id << " ";
+        showPos(head->right);
+    }
 }
 
 int main(){
     Node* tree;
-    tree->id = 1;
-    tree->x = 0.00001;
-    tree->y = 0.00002;
     tree->print();
     return 0;
 }
