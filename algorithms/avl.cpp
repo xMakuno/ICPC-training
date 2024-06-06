@@ -99,8 +99,8 @@ Node* leftRotation(Node* A){
     B->left = A;
     A->right = Bl;
 
-    A->height = max(A->left->getHeight(), A->right->getHieght()) + 1;
-    B->height = max(B->left->getHeight(), B->right->getHieght()) + 1;
+    A->height = max(A->left->getHeight(), A->right->getHeight()) + 1;
+    B->height = max(B->left->getHeight(), B->right->getHeight()) + 1;
 
     return B;
 }
@@ -135,7 +135,7 @@ Node* insertNode(Node* node, int id, float x, float y){
     }
     return node;
 }
-
+//TODO
 Node* search(Node* r, int id){
 }
 
