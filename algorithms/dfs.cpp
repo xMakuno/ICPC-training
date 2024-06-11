@@ -22,9 +22,11 @@ int main(){
 		neighbor[u].insert(v);
 		neighbor[v].insert(u);	
 	}
-	/*for(int i = 1; i <= n; ++i){
+	/*
+	 * Print out Adjacency List 
+	 * for(int i = 1; i <= n; ++i){
 		cout << "\nNode " << i << " -> ";
-		for(const int &v: thing[i]){
+		for(const int &v: neighbor[i]){
 			cout << v << " ";
 		}
 	}*/
