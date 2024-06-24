@@ -23,49 +23,6 @@ int main(){
                 cin >> matrix[i][j];
             }
         }
-        int i = 1, j = 1;
-        while( i < n+1 && j < m+1){
-            if(i == 1 && j == 1){
-                vector<int> neighbors;
-                neighbors.push_back(matrix[i+1][j]);
-                neighbors.push_back(matrix[i][j+1]);
-                int flag = check(neighbors, matrix[i][j]);
-                if(flag != -1){
-                    matrix[i][j] = flag;
-                }
-            }
-            if(i == 1){
-                vector<int> neighbors;
-                neighbors.push_back(matrix[i+1][j]);
-                neighbors.push_back(matrix[i][j+1]);
-                neighbors.push_back(matrix[i][j-1]);
-                int flag = check(neighbors, matrix[i][j]);
-                if(flag != -1){
-                    matrix[i][j] = flag;
-                }
-            }
-            if(j == 1){
-                vector<int> neighbors;
-                neighbors.push_back(matrix[i+1][j]);
-                neighbors.push_back(matrix[i][j+1]);
-                neighbors.push_back(matrix[i-1][j]);
-                int flag = check(neighbors, matrix[i][j]);
-                if(flag != -1){
-                    matrix[i][j] = flag;
-                }
-            }else{
-                vector<int> neighbors;
-                neighbors.push_back(matrix[i+1][j]);
-                neighbors.push_back(matrix[i][j+1]);
-                neighbors.push_back(matrix[i-1][j]);
-                neighbors.push_back(matrix[i][j-1]);
-                int flag = check(neighbors, matrix[i][j]);
-                if(flag != -1){
-                    matrix[i][j] = flag;
-                }
-            }
-            i++; j++;
-        }
         for(int i = 1; i <= n; ++i){
             for(int j = 1; j <=m;++j){
                 cout << matrix[i][j] << ' ';
