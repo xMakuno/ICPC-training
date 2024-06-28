@@ -7,13 +7,7 @@ int main(){
     while(T--){
         int x, y;
         cin >> x >> y;
-        if( x >= 0 && y >=-1){
-            cout <<"YES\n";
-        }else if( x < 0 && (x < y)){
-            cout <<"YES\n";
-        }else{
-            cout <<"NO\n";
-        }
+        cout << (y >= -1? "YES\n" : "NO\n");
     }
     return 0;
 }
