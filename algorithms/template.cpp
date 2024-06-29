@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define ll long long
 #define fo(n) for(int i=0;i<n;i++)
 #define foi(m,n) for(int i=m;i<n;i++)
 #define foj(m,n) for(int j=m;j<n;j++)
@@ -15,7 +14,9 @@ using namespace std;
 #define pob pop_back
 #define pof pop_front
 #define endl '\n'
-#define printa(v) for(auto x: v) { cout << x << " ";}
+#define printArr(v,n) for(int i = 0; i < n; ++i) { cout << x << " \n"[i==n-1];}
+
+typedef long long ll;
 
 signed main(){
     return 0;
