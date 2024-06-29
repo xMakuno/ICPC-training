@@ -18,6 +18,26 @@ using namespace std;
 #define YES cout << "YES\n";
 #define NO cout << "NO\n";
 
+
+// safe double operations and etc. Stole it from my buddy @arctan
+
+int isqrt(int n) {
+    int lo = 0, hi = n;
+    while (lo <= hi) {
+        int mid = lo + (hi - lo) / 2;
+        if (mid * mid <= n) {
+            lo = mid + 1;
+        } else {
+            hi = mid - 1;
+        }
+    }
+    return lo - 1;
+}
+
+long long div_ceil(long long a, long long b) {
+    return (b >= 0 ? (a + b - 1) : a) / b;
+}
+
 typedef long long ll;
 
 signed main(){
