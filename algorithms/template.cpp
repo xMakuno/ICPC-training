@@ -15,6 +15,8 @@ using namespace std;
 #define pof pop_front
 #define endl '\n'
 #define printArr(v,n) for(int i = 0; i < n; ++i) { cout << x << " \n"[i==n-1];}
+#define YES cout << "YES\n";
+#define NO cout << "NO\n";
 
 typedef long long ll;
 

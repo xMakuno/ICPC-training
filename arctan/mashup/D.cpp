@@ -7,12 +7,9 @@ int main(){
     while(T--){
         int n, d;
         cin >> n >> d;
-        if(d <= n+ceil(n/2)){
-            cout << "YES\n";
-        }else if(d <= n){
-            cout << "YES\n";
-        }else{
-            cout << "NO\n";
+        int x = floor(sqrt(d)-1), y = ceil(sqrt(d)-1);
+        if(n == d){
+            
         }
     }
     return 0;
