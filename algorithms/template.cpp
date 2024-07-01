@@ -17,7 +17,7 @@ using namespace std;
 #define printArr(v,n) for(int i = 0; i < n; ++i) { cout << x << " \n"[i==n-1];}
 #define YES cout << "YES\n";
 #define NO cout << "NO\n";
-
+#define newL cout << '\n';
 
 // safe double operations and etc. Stole it from my buddy @arctan
 
