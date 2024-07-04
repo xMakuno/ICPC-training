@@ -13,9 +13,14 @@ int main(){
     for(int i = 1; i <= n;++i){
         all_nums.insert(i);
     }
-    int matchVal = sum/2;
-    while(matchVal !=0){
+    int groups = n / 2;
+    set<int> ans1, ans2;
+    while(!all_nums.empty()){
+        if(ans1.size() < groups){
+            
+        }else{
 
+        }
     }
     return 0;
 }
