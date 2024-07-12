@@ -20,7 +20,7 @@ bool dub(int n){
     }
 }
 int main(){
-    int num1[2];
+    /* int num1[2];
     cin >> a >> b >> c >> d;
     string first = ;
     string second = ;
@@ -45,6 +45,6 @@ int main(){
         }
     }else{
 
-    }
+    } */
     return 0;
 }
