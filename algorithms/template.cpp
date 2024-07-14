@@ -17,7 +17,8 @@ using namespace std;
 #define YES cout << "YES\n";
 #define NO cout << "NO\n";
 #define newL cout << '\n';
-
+typedef long long ll;
+// Double-Type Operations Section
 // safe double operations and etc. Stole it from my buddy @arctan
 
 int isqrt(int n) {
@@ -44,8 +45,20 @@ double dist(int i, int j) {
 	return sqrt((x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j]));
 }
 
-typedef long long ll;
+// Bitmasking Section
+#define TEST(a,b) ((a) & (1<<(b)))
+#define SET(a,b) ((a) | (1<<(b)))
+#define FLIP(a,b) ((a) ^ (1<<(b)))
+#define CLEAR(a,b) ((a) & ~(1<<(b)))
+#define EP2(n) (n == (n&-n))
 
-signed main(){
+void toBinary(unsigned int n){
+	for(int i = 31; i>=0; i--)
+		cout<<(TEST(n,i)?1:0);
+	cout<<'\n';
+}
+
+
+int main(){
     return 0;
 }
