@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define fo(n) for(int i=0;i<n;i++)
 #define foi(m,n) for(int i=m;i<n;i++)
 #define foj(m,n) for(int j=m;j<n;j++)
 #define rev(n) for(int i=n-1;i>=0;i--)
@@ -14,7 +13,7 @@ using namespace std;
 #define pob pop_back
 #define pof pop_front
 #define endl '\n'
-#define printArr(v,n) for(int i = 0; i < n; ++i) { cout << x << " \n"[i==n-1];}
+#define printArr(v,n) for(int i = 0; i < n; ++i) { cout << v[i] << " \n"[i==n-1];}
 #define YES cout << "YES\n";
 #define NO cout << "NO\n";
 #define newL cout << '\n';
@@ -36,6 +35,13 @@ int isqrt(int n) {
 
 long long div_ceil(long long a, long long b) {
     return (b >= 0 ? (a + b - 1) : a) / b;
+}
+
+const int MAX = 1e9 +5;
+
+double dist(int i, int j) {
+    int x[MAX], y[MAX];
+	return sqrt((x[i] - x[j]) * (x[i] - x[j]) + (y[i] - y[j]) * (y[i] - y[j]));
 }
 
 typedef long long ll;
