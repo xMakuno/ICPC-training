@@ -2,6 +2,7 @@
 using namespace std;
 typedef long long ll;
 int main(){
+    //WA
     double a,b,x;
     cin >> a >> b >> x;
     double z = atan(a*b/x);

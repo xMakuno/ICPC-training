@@ -23,7 +23,6 @@ void solve(int n){
             break;
         }
     }
-		    
 }
 
 int main(){
