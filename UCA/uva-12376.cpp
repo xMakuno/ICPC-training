@@ -7,8 +7,7 @@ pair<int, int> dfs(vector<bool> &visited, vector<vector<int>> &al, vector<int> &
     // cout << "Looking: " << u << '\n';
     visited[u] = true;
     int option = 0;
-    for(auto &v: al[u]){
-        
+    for(auto &v: al[u]){   
         if(visited[v] == false && vals[option] < vals[v]){
             option = v;
         }
