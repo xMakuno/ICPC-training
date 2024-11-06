@@ -25,7 +25,7 @@ int main(){
     cin.tie(0);
     int T = 1;
     cin >> T;
-    for(int t = 1; t <= T; ++t){
+    for(int t = 1; t <= T; t++){
         int n;
         cin >> n;
         vvi al(n+1);
@@ -37,6 +37,7 @@ int main(){
         vi visited(n+1,0);
         int res = -1, node = 1e9;
         for(int i = 1; i <= n; ++i){
+            cout << "hola\n";
             if(visited[i] == 0){
                 int thing = dfs(visited, al, i);
                 if(thing > res){
