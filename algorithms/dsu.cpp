@@ -1,41 +1,48 @@
 #include<bits/stdc++.h>
-#define vi vector<int>
-#define pii pair<int, int>
-#define vvi vector<vi>
 #define vb vector<bool>
-#define vpii vector<pii>
-
+#define vi vector<int>
 using namespace std;
-
-const int MAX = 2e5;
-
+const int MAX = 2000000;
 int uf[MAX];
+bool internet[MAX];
 
 int dsu_find(int a){
     return uf[a] == a ? a : uf[a] = dsu_find(uf[a]);
 }
 
-void dsu_join(int a, int b){
-    if(dsu_find(a) != dsu_find(b)){
-        uf[a] = dsu_find(b);
+void dsu_join(int u, int v){
+    if(internet[u] || internet[v]){
+        internet[u] = internet[v] = true;
+    }
+    if( dsu_find(u) != dsu_find(v)){
+        uf[u] =  dsu_find(v);
     }
 }
-
 
 int main(){
     int n, m;
     cin >> n >> m;
-    for(int i=1; i <= n; ++i){
+    internet[1] = true;
+    for(int i = 1; i <= n; ++i){
         uf[i] = i;
     }
-    for(int i = 0; i < m; ++i){
-        int u,v;
+    for(int i=0; i < m; ++i){
+        int u, v;
         cin >> u >> v;
         dsu_join(u,v);
     }
-    for(int i = 1; i <= n;++i){
-        cout << uf[i] << " ";
+    bool connected = true;
+    for(int i = 2; i <= n; ++i){
+        if(!internet[i]){
+            connected = false;
+            cout << i << '\n';
+        }
     }
-    cout << '\n';
+    if(connected){
+        cout << "Connected\n";
+    }
     return 0;
 }
+
+
+
