@@ -2,48 +2,66 @@
 #define INF 1e9
 using namespace std;
 
+// TLE
+void BU(){
+    int n, s;
+    cin >> n >> s;
+    vector<int> coins(n+1);
+    for(int i = 1; i <= n;++i){
+        cin >> coins[i];
+    }
+    vector<vector<int>> memo(s+1, vector<int>(n+1));
+    for(int i = 1; i <= s; ++i){
+        memo[i][0] = INF;
+    }
+    for(int i = 0; i <= n; ++i){
+        memo[0][i] = 0;
+    }
+    for(int i = 1; i <= s; ++i){
+        for(int j = 1; j <= n; ++j){
+            if(coins[j] <= i){
+                int take = 1+memo[i-coins[j]][j];
+                int skip = memo[i][j-1];
+                memo[i][j] = min(take,skip);
+            }else{
+                memo[i][j] = memo[i][j-1];
+            }
+        }
+    }
 
-int dp(int s, int i, vector<int> &c, vector<vector<int>> &memo){
-    cout << s << " " << c[i] << endl;
-    if(s == 0){
-        return 0;
-    }
-    if(i == c.size()){
-        return INF;
-    }
-    if(memo[s][i] != INF){
-        return memo[s][i];
-    }
-    if(s >= c[i]){
-        memo[s][i] = min(1 + dp(s-c[i],i,c, memo), dp(s,i+1,c, memo));
+    if(memo[s][n] == INF){
+        cout << "-1\n";   
     }else{
-        memo[s][i] = dp(s,i+1,c, memo);
+        cout << memo[s][n] << endl;
     }
-    return memo[s][i];
 }
 
 int main(){
+    //BU();
     int n, s;
     cin >> n >> s;
     vector<int> coins(n);
-    for(int i = 0; i < n;++i){
+    for(int i = 0; i < n; ++i){
         cin >> coins[i];
     }
-    sort(coins.rbegin(), coins.rend());
-    /* for(int i = 0; i < n; ++i){
-        cout << coins[i] << " \n"[i == n-1];
-    } */
-    vector<vector<int>> memo(s+1, vector<int>(n+1, INF));
-    for(int i = 0; i <= n; ++i){
-        memo[0][i]=0;
+    vector<int> memo(s+1, INF);
+    memo[0] = 0;
+    for(int i = 1; i<= s; ++i){
+        for(int j = 0; j < n; ++j){
+            int take = INF;
+            if(coins[j] <= i){
+                take = 1 + memo[i - coins[j]];
+            }
+            memo[i] = min(memo[i], take);
+        }
     }
-    for(int i = 1; i <=s; ++i){
-        memo[i][0]=-1;
-    }
-    dp(s,1,coins,memo);
-    cout << (memo[s][n] == INF ? -1 : memo[s][n]) << endl;
     /* for(int i = 0; i <= s; ++i){
-        cout << memo[i] << " \n"[i == s];
+        cout << memo[i] << " \n"[ i == s];
     } */
+    if(memo[s] == INF){
+        cout << "-1\n";
+    }else{
+        cout << memo[s] << endl;
+    }
     return 0;
 }
