@@ -2,9 +2,8 @@
 using namespace std;
 typedef long long ll;
 
-ll MOD = 1e9 +7;
 
-ll expo(ll a, ll b){
+ll expo(ll a, ll b, ll MOD){
     long long result = 1;
     while (b) {
         if (b & 1)
@@ -21,8 +20,8 @@ int main(){
     while(T--){
         ll a,b,c;
         cin >> a >> b >> c;
-        ll d = expo(b,c) % MOD;
-        cout << expo(a,d) << endl;
+        ll d = expo(b,c, 1e9 + 6);
+        cout << expo(a,d, 1e9 + 7) << endl;
     }
     return 0;
 }

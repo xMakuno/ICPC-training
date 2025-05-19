@@ -8,9 +8,9 @@ int main(){
     for(int i = 0; i < n;++i){
         cin >> v[i];
     }
-    int mx = v[0];
-    int cur = v[0];
-    for(int i = 1; i < n; ++i){
+    int mx = -1;
+    int cur = 0;
+    for(int i = 0; i < n; ++i){
         cur += v[i];
         if(cur < 0) cur = 0;
         mx = max(cur, mx);
